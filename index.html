@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Northgate Platform Handbook</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Northgate Platform Handbook</h1>
+    <p class="tagline">Deploy, rollback and on-call runbooks for the Northgate Labs platform team.</p>
+  </header>
+  <main>
+    <section id="deploy">
+      <h2>Deploy a service</h2>
+      <ol>
+        <li>Confirm the release tag has a green <code>tests</code> check on <code>main</code>.</li>
+        <li>Post the deploy notice in the platform channel with the tag and the owner.</li>
+        <li>Run the deploy from the release pipeline and watch the health dashboard for ten minutes.</li>
+      </ol>
+    </section>
+    <section id="rollback">
+      <h2>Roll back a deploy</h2>
+      <ol>
+        <li>Roll back when error rate stays above 2 percent for five minutes after a deploy.</li>
+        <li>Redeploy the previous release tag from the pipeline; never patch on the host.</li>
+        <li>Post the rollback notice and open an incident ticket with the two tags.</li>
+      </ol>
+    </section>
+    <section id="oncall">
+      <h2>On-call rotation</h2>
+      <table>
+        <tr><th>Week</th><th>Primary</th><th>Secondary</th></tr>
+        <tr><td>Oct 12 to Oct 18, 2026</td><td>Priya Raman</td><td>Tom Alder</td></tr>
+        <tr><td>Oct 19 to Oct 25, 2026</td><td>Tom Alder</td><td>Lena Okafor</td></tr>
+        <tr><td>Oct 26 to Nov 1, 2026</td><td>Lena Okafor</td><td>Priya Raman</td></tr>
+      </table>
+    </section>
+  </main>
+  <footer>
+    <p>Northgate Labs platform team handbook, version 1.0, October 2026. Written by the platform team for internal use.</p>
+  </footer>
+</body>
+</html>
